@@ -84,5 +84,29 @@ namespace KelimeOyunu
             return questions;
 
         }
+
+        public bool insertGamer(string ad, int puan, int kalan_sure, DateTime tarih)
+        {
+            string query = "INSERT INTO `oyuncular`(`oyuncu_ad`, `oyuncu_puan`, `oyuncu_sure`, `oynama_zamanı`) VALUES(@ad, @puan, @sure, @zaman)";
+            MySqlCommand command = new MySqlCommand(query, dbConnection.getConnection);
+
+            command.Parameters.Add("@ad", MySqlDbType.VarChar).Value = ad;
+            command.Parameters.Add("@puan", MySqlDbType.Int32).Value = puan;
+            command.Parameters.Add("@sure", MySqlDbType.Int32).Value = kalan_sure;
+            command.Parameters.Add("@zaman", MySqlDbType.DateTime).Value = tarih;
+
+            dbConnection.openConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                dbConnection.closeConnection();
+                return true;
+            }
+            else
+            {
+                dbConnection.closeConnection();
+                return false;
+            }
+        }
     }
 }

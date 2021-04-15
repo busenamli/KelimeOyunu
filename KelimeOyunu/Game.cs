@@ -18,7 +18,7 @@ namespace KelimeOyunu
         int twenty_seconds = 20;
         int soru_no = 1;
         int r1, r2;
-        string user_name;
+        string userName = Form1.user_name.ToString();
         string answer;
         string question;
         Random rnd = new Random();
@@ -33,6 +33,11 @@ namespace KelimeOyunu
         public Game()
         {
             InitializeComponent();
+            
+        }
+
+        private void Game_Load(object sender, EventArgs e)
+        {
             timer1.Start();
 
             q4();
@@ -258,7 +263,11 @@ namespace KelimeOyunu
 
         public void finishGame()
         {
-            MessageBox.Show("Oyun bitti");
+            timer1.Stop();
+            int kalan_zaman = Convert.ToInt32(minute_label.Text)*60 + Convert.ToInt32(second_label.Text);
+            DateTime tarih = DateTime.Now;
+            dbService.insertGamer(userName, toplam_puan,kalan_zaman,tarih);
+            MessageBox.Show("Ad: " + userName + "\nPuan: " + toplam_puan +"\nKalan süre: " + minute_label.Text + ":" + second_label.Text + "\nOynama tarihi: " + tarih, "Oyun Bitti",MessageBoxButtons.OK);
             this.Close();
             Form1 form1 = new Form1();
             form1.Show();
@@ -373,7 +382,7 @@ namespace KelimeOyunu
 
         public void getModel(int soruNo)
         {
-            soru_no_label.Text = soruNo.ToString();
+            soru_no_label.Text = soruNo.ToString() + "-";
             if (soruNo == 2)
             {
                 q4();
@@ -459,10 +468,15 @@ namespace KelimeOyunu
         {
            
             r1 = rnd.Next(0, listCount(4));
+            r2 = rnd.Next(0, listCount(4));
 
-            do {
-                r2 = rnd.Next(0, listCount(4));
-            } while (r2 == r1);
+            if(r1 == r2)
+            {
+                while (r1 == r2)
+                {
+                    r2 = rnd.Next(0, listCount(4));
+                }
+            }
 
             questionModel = getQuestion(4, r1);
             nextQuestionModel = getQuestion(4, r2);
@@ -472,11 +486,15 @@ namespace KelimeOyunu
         {
   
             r1 = rnd.Next(0, listCount(5));
+            r2 = rnd.Next(0, listCount(5));
 
-            do
+            if (r1 == r2)
             {
-                r2 = rnd.Next(0, listCount(5));
-            } while (r2 == r1);
+                while (r1 == r2)
+                {
+                    r2 = rnd.Next(0, listCount(5));
+                }
+            }
 
             questionModel = getQuestion(5, r1);
             nextQuestionModel = getQuestion(5, r2);
@@ -486,11 +504,15 @@ namespace KelimeOyunu
         {
 
             r1 = rnd.Next(0, listCount(6));
+            r2 = rnd.Next(0, listCount(6));
 
-            do
+            if (r1 == r2)
             {
-                r2 = rnd.Next(0, listCount(6));
-            } while (r2 == r1);
+                while (r1 == r2)
+                {
+                    r2 = rnd.Next(0, listCount(6));
+                }
+            }
 
             questionModel = getQuestion(6, r1);
             nextQuestionModel = getQuestion(6, r2);
@@ -499,11 +521,15 @@ namespace KelimeOyunu
         {
 
             r1 = rnd.Next(0, listCount(7));
+            r2 = rnd.Next(0, listCount(7));
 
-            do
+            if (r1 == r2)
             {
-                r2 = rnd.Next(0, listCount(7));
-            } while (r2 == r1);
+                while (r1 == r2)
+                {
+                    r2 = rnd.Next(0, listCount(7));
+                }
+            }
 
             questionModel = getQuestion(7, r1);
             nextQuestionModel = getQuestion(7, r2);
@@ -513,11 +539,15 @@ namespace KelimeOyunu
         {
 
             r1 = rnd.Next(0, listCount(8));
+            r2 = rnd.Next(0, listCount(8));
 
-            do
+            if (r1 == r2)
             {
-                r2 = rnd.Next(0, listCount(8));
-            } while (r2 == r1);
+                while (r1 == r2)
+                {
+                    r2 = rnd.Next(0, listCount(8));
+                }
+            }
 
             questionModel = getQuestion(8, r1);
             nextQuestionModel = getQuestion(8, r2);
@@ -527,11 +557,15 @@ namespace KelimeOyunu
         {
 
             r1 = rnd.Next(0, listCount(9));
+            r2 = rnd.Next(0, listCount(9));
 
-            do
+            if (r1 == r2)
             {
-                r2 = rnd.Next(0, listCount(9));
-            } while (r2 == r1);
+                while (r1 == r2)
+                {
+                    r2 = rnd.Next(0, listCount(9));
+                }
+            }
 
             questionModel = getQuestion(9, r1);
             nextQuestionModel = getQuestion(9, r2);
@@ -541,11 +575,15 @@ namespace KelimeOyunu
         {
 
             r1 = rnd.Next(0, listCount(10));
+            r2 = rnd.Next(0, listCount(10));
 
-            do
+            if (r1 == r2)
             {
-                r2 = rnd.Next(0, listCount(10));
-            } while (r2 == r1);
+                while (r1 == r2)
+                {
+                    r2 = rnd.Next(0, listCount(10));
+                }
+            }
 
             questionModel = getQuestion(10, r1);
             nextQuestionModel = getQuestion(10, r2);
@@ -623,11 +661,6 @@ namespace KelimeOyunu
                 default:
                     break;
             }
-        }
-
-        private void Game_Load(object sender, EventArgs e)
-        {
-            
         }
 
         public void getEnable(string a, string e)

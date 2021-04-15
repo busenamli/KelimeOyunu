@@ -33,11 +33,11 @@ namespace KelimeOyunu
             this.welcome_label = new System.Windows.Forms.Label();
             this.add_word_button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.name_text = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.back_picture = new System.Windows.Forms.PictureBox();
             this.exit_picture = new System.Windows.Forms.PictureBox();
-            this.name_text = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back_picture)).BeginInit();
@@ -96,6 +96,26 @@ namespace KelimeOyunu
             this.panel1.Size = new System.Drawing.Size(1000, 566);
             this.panel1.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Font = new System.Drawing.Font("Century751 No2 BT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(440, 205);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 27);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Adınızı Giriniz:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // name_text
+            // 
+            this.name_text.Font = new System.Drawing.Font("Century751 No2 BT", 12F, System.Drawing.FontStyle.Italic);
+            this.name_text.Location = new System.Drawing.Point(440, 235);
+            this.name_text.MaxLength = 50;
+            this.name_text.Name = "name_text";
+            this.name_text.Size = new System.Drawing.Size(135, 27);
+            this.name_text.TabIndex = 3;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.back_picture);
@@ -129,25 +149,6 @@ namespace KelimeOyunu
             this.exit_picture.TabIndex = 3;
             this.exit_picture.TabStop = false;
             this.exit_picture.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // name_text
-            // 
-            this.name_text.Font = new System.Drawing.Font("Century751 No2 BT", 12F, System.Drawing.FontStyle.Italic);
-            this.name_text.Location = new System.Drawing.Point(440, 235);
-            this.name_text.Name = "name_text";
-            this.name_text.Size = new System.Drawing.Size(135, 27);
-            this.name_text.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.Font = new System.Drawing.Font("Century751 No2 BT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(440, 205);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 27);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Adınızı Giriniz:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 

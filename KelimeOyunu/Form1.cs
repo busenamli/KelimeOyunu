@@ -13,6 +13,7 @@ namespace KelimeOyunu
     public partial class Form1 : Form
     {
         public static string user_name;
+
         public Form1()
         {
             InitializeComponent();
@@ -44,9 +45,8 @@ namespace KelimeOyunu
         {
             if (!name_text.Text.Equals(""))
             {
-                //user_name = name_text.Text.ToLower();
+                user_name = name_text.Text.ToString();
                 Game startGame = new Game();
-                startGame.user_name = name_text.Text;
                 getForm(startGame);
                 back_picture.Visible = true;
                 panel1.Visible = false;
