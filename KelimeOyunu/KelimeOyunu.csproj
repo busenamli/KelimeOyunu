@@ -112,8 +112,10 @@
     <Compile Include="Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
+    <Compile Include="LetterModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionModel.cs" />
     <EmbeddedResource Include="AddWord.resx">
       <DependentUpon>AddWord.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +151,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\colors-hd-backgrounds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-button-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-icon-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

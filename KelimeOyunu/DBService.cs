@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -56,6 +57,32 @@ namespace KelimeOyunu
                 dbConnection.closeConnection();
                 return false;
             }
+        }
+
+        public List<QuestionModel> getQuestion(int cevap_uzunluk)
+        {
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+            List<QuestionModel> questions = new List<QuestionModel>();
+
+
+            //string query = "SELECT `soru`,`cevap` FROM `sorular` WHERE `cevap_uzunluk`=4";
+            string query = "SELECT `soru`,`cevap` FROM `sorular` WHERE `cevap_uzunluk`=@cvp";
+            MySqlCommand command = new MySqlCommand(query, dbConnection.getConnection);
+
+            command.Parameters.AddWithValue("@cvp", cevap_uzunluk);
+            dbConnection.openConnection();
+
+            MySqlDataReader oku = command.ExecuteReader();
+
+            
+            while (oku.Read())
+            {
+                questions.Add(new QuestionModel(oku["soru"].ToString(), oku["cevap"].ToString()));
+            }
+            dbConnection.closeConnection();
+            return questions;
+
         }
     }
 }

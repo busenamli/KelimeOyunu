@@ -12,6 +12,7 @@ namespace KelimeOyunu
 {
     public partial class Form1 : Form
     {
+        public static string user_name;
         public Form1()
         {
             InitializeComponent();
@@ -41,18 +42,29 @@ namespace KelimeOyunu
 
         private void start_button_Click(object sender, EventArgs e)
         {
-            Game startGame = new Game();
-            getForm(startGame);
-            panel1.Visible = false;
-            //startGame.Show(this);
-            //this.Hide();
+            if (!name_text.Text.Equals(""))
+            {
+                //user_name = name_text.Text.ToLower();
+                Game startGame = new Game();
+                startGame.user_name = name_text.Text;
+                getForm(startGame);
+                back_picture.Visible = true;
+                panel1.Visible = false;
+                //startGame.Show(this);
+                //this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen adınızı giriniz", "Geçersiz Giriş", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
-        private void exit_button_Click(object sender, EventArgs e)
+        /*private void exit_button_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.Exit();
-        }
+        }*/
 
         private void add_word_button_Click(object sender, EventArgs e)
         {
@@ -60,6 +72,7 @@ namespace KelimeOyunu
             getForm(addWord);
             /*addWord.MdiParent = this;
             addWord.Show();*/
+            back_picture.Visible = true;
             panel1.Visible = false;
         }
 
@@ -70,6 +83,23 @@ namespace KelimeOyunu
             form.FormBorderStyle = FormBorderStyle.None;
             //panel2.Controls.Add(form);
             form.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            back_picture.Visible = false;
+            panel1.Visible = true;
         }
     }
 }
