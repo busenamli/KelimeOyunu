@@ -28,8 +28,6 @@ namespace KelimeOyunu
             if (soru_text.Text == "" || cevap_text.Text == "" )
             {
                 MessageBox.Show("Boş alan bırakmayınız", "Geçersiz Giriş", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //MessageBox.Show(cevap_uzunluk_count.ToString(), "Geçersiz Giriş", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
                 return;
             }
             else
@@ -77,21 +75,9 @@ namespace KelimeOyunu
             cevap_uzunluk_upDown.Value = 4;
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void soru_text_TextChanged(object sender, EventArgs e)
         {
-            //https://stackoverflow.com/questions/2893059/autoresize-textbox-control-vertically
-            /*const int padding = 3;
-            // get number of lines (first line is 0, so add 1)
-            int numLines = this.soru_text.GetLineFromCharIndex(this.soru_text.TextLength) + 1;
-            // get border thickness
-            int border = this.soru_text.Height - this.soru_text.ClientSize.Height;
-            // set height (height of one line * number of lines + spacing)
-            this.soru_text.Height = this.soru_text.Font.Height * numLines + padding + border;*/
+            
         }
     }
 }

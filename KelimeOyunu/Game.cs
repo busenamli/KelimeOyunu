@@ -24,7 +24,6 @@ namespace KelimeOyunu
         char[] charArray;
         Random rnd = new Random();
         QuestionModel questionModel;
-        LetterModel letterModel;
         List<QuestionModel> questions;
         List<QuestionModel> questions4;
         List<QuestionModel> questions5;
