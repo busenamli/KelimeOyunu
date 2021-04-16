@@ -19,6 +19,7 @@ namespace KelimeOyunu
         public Form1()
         {
             InitializeComponent();
+            
             this.IsMdiContainer = true;
 
         }
@@ -71,7 +72,7 @@ namespace KelimeOyunu
 
             ListViewItem item = new ListViewItem();
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
                 string sure = (gamerModel[i].Time/60).ToString() + ":" + (gamerModel[i].Time%60).ToString();
                 item = listView1.Items.Add(gamerModel[i].Name);

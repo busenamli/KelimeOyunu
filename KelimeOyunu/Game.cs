@@ -338,10 +338,10 @@ namespace KelimeOyunu
             DateTime tarih = DateTime.Now;
             dbService.insertGamer(userName, toplam_puan,kalan_zaman,tarih);
             MessageBox.Show("Ad: " + userName + "\nPuan: " + toplam_puan +"\nKalan süre: " + minute_label.Text + ":" + second_label.Text + "\nOynama tarihi: " + tarih, "Oyun Bitti",MessageBoxButtons.OK);
-            
-            //this.Container.Dispose();
-            
-            this.Hide();
+
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Close();
         }
 
 

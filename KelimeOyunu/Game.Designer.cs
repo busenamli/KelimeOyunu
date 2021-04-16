@@ -90,7 +90,7 @@ namespace KelimeOyunu
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Century751 No2 BT", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(246, 365);
+            this.textBox1.Location = new System.Drawing.Point(150, 366);
             this.textBox1.MaxLength = 1;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(33, 33);
@@ -102,7 +102,7 @@ namespace KelimeOyunu
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Century751 No2 BT", 16F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(284, 365);
+            this.textBox2.Location = new System.Drawing.Point(188, 366);
             this.textBox2.MaxLength = 1;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(33, 33);
@@ -114,7 +114,7 @@ namespace KelimeOyunu
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.Enabled = false;
             this.textBox3.Font = new System.Drawing.Font("Century751 No2 BT", 16F, System.Drawing.FontStyle.Bold);
-            this.textBox3.Location = new System.Drawing.Point(322, 365);
+            this.textBox3.Location = new System.Drawing.Point(226, 366);
             this.textBox3.MaxLength = 1;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(33, 33);
@@ -126,7 +126,7 @@ namespace KelimeOyunu
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Century751 No2 BT", 16F, System.Drawing.FontStyle.Bold);
-            this.textBox4.Location = new System.Drawing.Point(360, 365);
+            this.textBox4.Location = new System.Drawing.Point(264, 366);
             this.textBox4.MaxLength = 1;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(33, 33);
@@ -138,7 +138,7 @@ namespace KelimeOyunu
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox5.Enabled = false;
             this.textBox5.Font = new System.Drawing.Font("Century751 No2 BT", 16F, System.Drawing.FontStyle.Bold);
-            this.textBox5.Location = new System.Drawing.Point(398, 365);
+            this.textBox5.Location = new System.Drawing.Point(302, 366);
             this.textBox5.MaxLength = 1;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(33, 33);
@@ -151,7 +151,7 @@ namespace KelimeOyunu
             this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox6.Enabled = false;
             this.textBox6.Font = new System.Drawing.Font("Century751 No2 BT", 16F, System.Drawing.FontStyle.Bold);
-            this.textBox6.Location = new System.Drawing.Point(436, 365);
+            this.textBox6.Location = new System.Drawing.Point(340, 366);
             this.textBox6.MaxLength = 1;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(33, 33);
@@ -164,7 +164,7 @@ namespace KelimeOyunu
             this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox7.Enabled = false;
             this.textBox7.Font = new System.Drawing.Font("Century751 No2 BT", 16F, System.Drawing.FontStyle.Bold);
-            this.textBox7.Location = new System.Drawing.Point(474, 365);
+            this.textBox7.Location = new System.Drawing.Point(378, 366);
             this.textBox7.MaxLength = 1;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(33, 33);
@@ -177,7 +177,7 @@ namespace KelimeOyunu
             this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox8.Enabled = false;
             this.textBox8.Font = new System.Drawing.Font("Century751 No2 BT", 16F, System.Drawing.FontStyle.Bold);
-            this.textBox8.Location = new System.Drawing.Point(512, 365);
+            this.textBox8.Location = new System.Drawing.Point(416, 366);
             this.textBox8.MaxLength = 1;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(33, 33);
@@ -190,7 +190,7 @@ namespace KelimeOyunu
             this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox9.Enabled = false;
             this.textBox9.Font = new System.Drawing.Font("Century751 No2 BT", 16F, System.Drawing.FontStyle.Bold);
-            this.textBox9.Location = new System.Drawing.Point(550, 365);
+            this.textBox9.Location = new System.Drawing.Point(454, 366);
             this.textBox9.MaxLength = 1;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(33, 33);
@@ -203,7 +203,7 @@ namespace KelimeOyunu
             this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox10.Enabled = false;
             this.textBox10.Font = new System.Drawing.Font("Century751 No2 BT", 16F, System.Drawing.FontStyle.Bold);
-            this.textBox10.Location = new System.Drawing.Point(588, 365);
+            this.textBox10.Location = new System.Drawing.Point(492, 366);
             this.textBox10.MaxLength = 1;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(33, 33);
@@ -218,7 +218,7 @@ namespace KelimeOyunu
             this.question_label.BackColor = System.Drawing.Color.Transparent;
             this.question_label.Font = new System.Drawing.Font("Century751 No2 BT", 9.75F, System.Drawing.FontStyle.Bold);
             this.question_label.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.question_label.Location = new System.Drawing.Point(243, 167);
+            this.question_label.Location = new System.Drawing.Point(147, 168);
             this.question_label.MaximumSize = new System.Drawing.Size(300, 200);
             this.question_label.Name = "question_label";
             this.question_label.Size = new System.Drawing.Size(67, 16);
@@ -275,7 +275,7 @@ namespace KelimeOyunu
             // 
             this.ten_seconds_label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ten_seconds_label.AutoSize = true;
-            this.ten_seconds_label.Location = new System.Drawing.Point(244, 317);
+            this.ten_seconds_label.Location = new System.Drawing.Point(148, 318);
             this.ten_seconds_label.Name = "ten_seconds_label";
             this.ten_seconds_label.Size = new System.Drawing.Size(0, 13);
             this.ten_seconds_label.TabIndex = 16;
@@ -287,7 +287,7 @@ namespace KelimeOyunu
             this.okay_button.BackColor = System.Drawing.Color.Snow;
             this.okay_button.FlatAppearance.BorderSize = 0;
             this.okay_button.Font = new System.Drawing.Font("Century751 No2 BT", 9.75F, System.Drawing.FontStyle.Bold);
-            this.okay_button.Location = new System.Drawing.Point(537, 431);
+            this.okay_button.Location = new System.Drawing.Point(441, 432);
             this.okay_button.Name = "okay_button";
             this.okay_button.Size = new System.Drawing.Size(84, 37);
             this.okay_button.TabIndex = 17;
@@ -357,7 +357,7 @@ namespace KelimeOyunu
             this.soru_no_label.AutoSize = true;
             this.soru_no_label.Font = new System.Drawing.Font("Century751 No2 BT", 9.75F, System.Drawing.FontStyle.Bold);
             this.soru_no_label.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.soru_no_label.Location = new System.Drawing.Point(217, 167);
+            this.soru_no_label.Location = new System.Drawing.Point(121, 168);
             this.soru_no_label.MaximumSize = new System.Drawing.Size(300, 200);
             this.soru_no_label.Name = "soru_no_label";
             this.soru_no_label.Size = new System.Drawing.Size(20, 16);

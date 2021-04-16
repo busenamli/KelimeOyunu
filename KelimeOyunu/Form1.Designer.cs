@@ -54,7 +54,7 @@ namespace KelimeOyunu
             this.start_button.FlatAppearance.BorderSize = 0;
             this.start_button.Font = new System.Drawing.Font("Century751 No2 BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.start_button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.start_button.Location = new System.Drawing.Point(564, 313);
+            this.start_button.Location = new System.Drawing.Point(556, 333);
             this.start_button.Name = "start_button";
             this.start_button.Size = new System.Drawing.Size(135, 41);
             this.start_button.TabIndex = 0;
@@ -82,7 +82,7 @@ namespace KelimeOyunu
             this.add_word_button.BackColor = System.Drawing.Color.Snow;
             this.add_word_button.FlatAppearance.BorderSize = 0;
             this.add_word_button.Font = new System.Drawing.Font("Century751 No2 BT", 9.75F, System.Drawing.FontStyle.Bold);
-            this.add_word_button.Location = new System.Drawing.Point(760, 313);
+            this.add_word_button.Location = new System.Drawing.Point(754, 333);
             this.add_word_button.Name = "add_word_button";
             this.add_word_button.Size = new System.Drawing.Size(135, 41);
             this.add_word_button.TabIndex = 1;
@@ -114,7 +114,7 @@ namespace KelimeOyunu
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century751 No2 BT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(135, 157);
+            this.label2.Location = new System.Drawing.Point(152, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 27);
             this.label2.TabIndex = 6;
@@ -129,10 +129,10 @@ namespace KelimeOyunu
             this.listView1.Font = new System.Drawing.Font("Century751 No2 BT", 10F);
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(84, 187);
-            this.listView1.MaximumSize = new System.Drawing.Size(270, 180);
+            this.listView1.Location = new System.Drawing.Point(92, 187);
+            this.listView1.MaximumSize = new System.Drawing.Size(270, 245);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(270, 180);
+            this.listView1.Size = new System.Drawing.Size(270, 245);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -142,7 +142,7 @@ namespace KelimeOyunu
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century751 No2 BT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(659, 192);
+            this.label1.Location = new System.Drawing.Point(658, 212);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 27);
             this.label1.TabIndex = 4;
@@ -153,7 +153,7 @@ namespace KelimeOyunu
             // 
             this.name_text.Font = new System.Drawing.Font("Century751 No2 BT", 12F, System.Drawing.FontStyle.Italic);
             this.name_text.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.name_text.Location = new System.Drawing.Point(659, 222);
+            this.name_text.Location = new System.Drawing.Point(658, 242);
             this.name_text.MaxLength = 50;
             this.name_text.Name = "name_text";
             this.name_text.Size = new System.Drawing.Size(135, 27);

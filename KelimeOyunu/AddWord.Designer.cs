@@ -61,7 +61,7 @@ namespace KelimeOyunu
             // 
             this.cevap_uzunluk_upDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cevap_uzunluk_upDown.Font = new System.Drawing.Font("Century751 No2 BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cevap_uzunluk_upDown.Location = new System.Drawing.Point(343, 397);
+            this.cevap_uzunluk_upDown.Location = new System.Drawing.Point(315, 398);
             this.cevap_uzunluk_upDown.Maximum = new decimal(new int[] {
             10,
             0,
@@ -86,7 +86,7 @@ namespace KelimeOyunu
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.Font = new System.Drawing.Font("Century751 No2 BT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(154, 136);
+            this.label3.Location = new System.Drawing.Point(126, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 44);
             this.label3.TabIndex = 8;
@@ -100,7 +100,7 @@ namespace KelimeOyunu
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Century751 No2 BT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(154, 277);
+            this.label2.Location = new System.Drawing.Point(126, 278);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 58);
             this.label2.TabIndex = 7;
@@ -113,7 +113,7 @@ namespace KelimeOyunu
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Century751 No2 BT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(154, 377);
+            this.label1.Location = new System.Drawing.Point(126, 378);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 80);
             this.label1.TabIndex = 6;
@@ -125,7 +125,7 @@ namespace KelimeOyunu
             // 
             this.cevap_text.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cevap_text.Font = new System.Drawing.Font("Century751 No2 BT", 12F);
-            this.cevap_text.Location = new System.Drawing.Point(343, 291);
+            this.cevap_text.Location = new System.Drawing.Point(315, 292);
             this.cevap_text.Name = "cevap_text";
             this.cevap_text.Size = new System.Drawing.Size(208, 27);
             this.cevap_text.TabIndex = 4;
@@ -135,7 +135,7 @@ namespace KelimeOyunu
             // 
             this.soru_text.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.soru_text.Font = new System.Drawing.Font("Century751 No2 BT", 12F);
-            this.soru_text.Location = new System.Drawing.Point(343, 136);
+            this.soru_text.Location = new System.Drawing.Point(315, 137);
             this.soru_text.Multiline = true;
             this.soru_text.Name = "soru_text";
             this.soru_text.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -149,7 +149,7 @@ namespace KelimeOyunu
             this.save_button.BackColor = System.Drawing.Color.Snow;
             this.save_button.FlatAppearance.BorderSize = 0;
             this.save_button.Font = new System.Drawing.Font("Century751 No2 BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.save_button.Location = new System.Drawing.Point(704, 278);
+            this.save_button.Location = new System.Drawing.Point(715, 278);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(146, 53);
             this.save_button.TabIndex = 0;
