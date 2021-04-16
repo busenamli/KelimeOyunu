@@ -63,9 +63,29 @@ namespace KelimeOyunu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Books_words_black_Download_PowerPoint_Backgrounds___PPT_Backgrounds {
+            get {
+                object obj = ResourceManager.GetObject("Books words black Download PowerPoint Backgrounds   PPT Backgrounds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_icon_png {
             get {
                 object obj = ResourceManager.GetObject("button-icon-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Close_256 {
+            get {
+                object obj = ResourceManager.GetObject("Close-256", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +113,89 @@ namespace KelimeOyunu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095 {
+            get {
+                object obj = ResourceManager.GetObject("hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hand_painted_watercolor_background_with_sky_clouds_shape_24972_10951 {
+            get {
+                object obj = ResourceManager.GetObject("hand-painted-watercolor-background-with-sky-clouds-shape_24972-10951", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap left_arrow {
             get {
                 object obj = ResourceManager.GetObject("left-arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_arrow1 {
+            get {
+                object obj = ResourceManager.GetObject("left-arrow1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap photo_1569982175971_d92b01cf8694 {
+            get {
+                object obj = ResourceManager.GetObject("photo-1569982175971-d92b01cf8694", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PNGIX_com_back_button_png_1871597 {
+            get {
+                object obj = ResourceManager.GetObject("PNGIX.com_back-button-png_1871597", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quotes_729173_1920 {
+            get {
+                object obj = ResourceManager.GetObject("quotes-729173_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reply {
+            get {
+                object obj = ResourceManager.GetObject("reply", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Word_Yahtzee_Wallpaper_World_of_3D_Letter_Dice {
+            get {
+                object obj = ResourceManager.GetObject("Word Yahtzee Wallpaper World of 3D Letter Dice", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

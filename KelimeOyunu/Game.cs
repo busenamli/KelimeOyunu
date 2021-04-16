@@ -21,11 +21,18 @@ namespace KelimeOyunu
         string userName = Form1.user_name.ToString();
         string answer;
         string question;
+        char[] charArray;
         Random rnd = new Random();
         QuestionModel questionModel;
-        QuestionModel nextQuestionModel;
         LetterModel letterModel;
         List<QuestionModel> questions;
+        List<QuestionModel> questions4;
+        List<QuestionModel> questions5;
+        List<QuestionModel> questions6;
+        List<QuestionModel> questions7;
+        List<QuestionModel> questions8;
+        List<QuestionModel> questions9;
+        List<QuestionModel> questions10;
         DBService dbService = new DBService();
         int soru_puan;
         int toplam_puan = 0;
@@ -33,30 +40,162 @@ namespace KelimeOyunu
         public Game()
         {
             InitializeComponent();
-            
+
+            questions4 = getQuestions(4);
+            questions5 = getQuestions(5);
+            questions6 = getQuestions(6);
+            questions7 = getQuestions(7);
+            questions8 = getQuestions(8);
+            questions9 = getQuestions(9);
+            questions10 = getQuestions(10);
+
+        }
+
+        public List<QuestionModel> getQuestions(int cevap_uzunluk)
+        {
+            questions = dbService.getQuestion(cevap_uzunluk);
+
+            return questions;
         }
 
         private void Game_Load(object sender, EventArgs e)
         {
             timer1.Start();
+           
+            r2 = getRandom(questions4.Count());
+            questionModel = questions4[r2];
+            questions4.Remove(questionModel);
 
-            q4();
             question = questionModel.Question;
-            answer = questionModel.Answer;
+            answer = questionModel.Answer.ToLower();
 
             question_label.Text = question;
-            getVisible(answer);
+            getVisible(soru_no);
             soru_no++;
         }
 
 
-        public LetterModel getLetter(string cevap)
+        public void getLetter(string cevap)
         {
-            char[] charArray = cevap.ToCharArray();
+            char letter;
+            charArray = cevap.ToCharArray();
             r1 = rnd.Next(0, charArray.Length);
-            char letter = charArray[r1];
-            letterModel = new LetterModel(letter, r1);
-            return letterModel;
+
+            switch (r1)
+            {
+                case 0:
+                    if (!checkTextBox(textBox1))
+                    {
+                        getLetter(cevap);
+                    }
+                    else
+                    {
+                        letter = charArray[r1];
+                        textBox1.Text = letter.ToString();
+                    }
+                    break;
+                case 1:
+                    if (!checkTextBox(textBox2))
+                    {
+                        getLetter(cevap);
+                    }
+                    else
+                    {
+                        letter = charArray[r1];
+                        textBox2.Text = letter.ToString();
+                    }
+                    break;
+                case 2:
+                    if (!checkTextBox(textBox3))
+                    {
+                        getLetter(cevap);
+                    }
+                    else
+                    {
+                        letter = charArray[r1];
+                        textBox3.Text = letter.ToString();
+                    }
+                    break;
+                case 3:
+                    if (!checkTextBox(textBox4))
+                    {
+                        getLetter(cevap);
+                    }
+                    else
+                    {
+                        letter = charArray[r1];
+                        textBox4.Text = letter.ToString();
+                    }
+                    break;
+                case 4:
+                    if (!checkTextBox(textBox5))
+                    {
+                        getLetter(cevap);
+                    }
+                    else
+                    {
+                        letter = charArray[r1];
+                        textBox5.Text = letter.ToString();
+                    }
+                    break;
+                case 5:
+                    if (!checkTextBox(textBox6))
+                    {
+                        getLetter(cevap);
+                    }
+                    else
+                    {
+                        letter = charArray[r1];
+                        textBox6.Text = letter.ToString();
+                    }
+                    break;
+                case 6:
+                    if (!checkTextBox(textBox7))
+                    {
+                        getLetter(cevap);
+                    }
+                    else
+                    {
+                        letter = charArray[r1];
+                        textBox7.Text = letter.ToString();
+                    }
+                    break;
+                case 7:
+                    if (!checkTextBox(textBox8))
+                    {
+                        getLetter(cevap);
+                    }
+                    else
+                    {
+                        letter = charArray[r1];
+                        textBox8.Text = letter.ToString();
+                    }
+                    break;
+                case 8:
+                    if (!checkTextBox(textBox9))
+                    {
+                        getLetter(cevap);
+                    }
+                    else
+                    {
+                        letter = charArray[r1];
+                        textBox9.Text = letter.ToString();
+                    }
+                    break;
+                case 9:
+                    if (!checkTextBox(textBox10))
+                    {
+                        getLetter(cevap);
+                    }
+                    else
+                    {
+                        letter = charArray[r1];
+                        textBox10.Text = letter.ToString();
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
 
         public bool checkTextBox(TextBox textBox)
@@ -71,78 +210,10 @@ namespace KelimeOyunu
         private void button2_Click(object sender, EventArgs e)
         {
 
-            if (soru_puan != 0)
+            if (soru_puan != 100)
             {
                 
                 getLetter(answer);
-                int index = letterModel.Index;
-                char a = letterModel.Letter;
-
-                switch (index)
-                {
-                    case 0:
-                        if (checkTextBox(textBox1))
-                        {
-                            textBox1.Text = a.ToString();
-                        }
-                        break;
-                    case 1:
-                        if (checkTextBox(textBox2))
-                        {
-                            textBox2.Text = a.ToString();
-                        }
-                        break;
-                    case 2:
-                        if (checkTextBox(textBox3))
-                        {
-                            textBox3.Text = a.ToString();
-                        }
-                        break;
-                    case 3:
-                        if (checkTextBox(textBox4))
-                        {
-                            textBox4.Text = a.ToString();
-                        }
-                        break;
-                    case 4:
-                        if (checkTextBox(textBox5))
-                        {
-                            textBox5.Text = a.ToString();
-                        }
-                        break;
-                    case 5:
-                        if (checkTextBox(textBox6))
-                        {
-                            textBox6.Text = a.ToString();
-                        }
-                        break;
-                    case 6:
-                        if (checkTextBox(textBox7))
-                        {
-                            textBox7.Text = a.ToString();
-                        }
-                        break;
-                    case 7:
-                        if (checkTextBox(textBox8))
-                        {
-                            textBox8.Text = a.ToString();
-                        }
-                        break;
-                    case 8:
-                        if (checkTextBox(textBox9))
-                        {
-                            textBox9.Text = a.ToString();
-                        }
-                        break;
-                    case 9:
-                        if (checkTextBox(textBox10))
-                        {
-                            textBox10.Text = a.ToString();
-                        }
-                        break;
-                    default:
-                        break;
-                }
 
                 soru_puan = soru_puan - 100;
                 question_score.Text = soru_puan.ToString();
@@ -152,9 +223,9 @@ namespace KelimeOyunu
                 getModel(soru_no);
                 nextQuestion();
                 question = questionModel.Question;
-                answer = questionModel.Answer;
+                answer = questionModel.Answer.ToLower();
                 question_label.Text = question;
-                getVisible(answer);
+                getVisible(soru_no);
                 soru_no++;
             }
         }
@@ -218,26 +289,12 @@ namespace KelimeOyunu
                 nextQuestion();
                 timer1.Start();
                 question = questionModel.Question;
-                answer = questionModel.Answer;
+                answer = questionModel.Answer.ToLower();
                 question_label.Text = question;
-                getVisible(answer);
+                getVisible(soru_no);
                 soru_no++;
 
             }
-
-        }
-
-       public void nextQuestion()
-        {
-            
-            clearTextBox();
-            okay_button.Visible = false;
-            answer_button.Visible = true;
-            answer_button.Enabled = true;
-            get_letter_button.Visible = true;
-            get_letter_button.Enabled = true;
-            ten_seconds_label.Visible = false;
-            getEnable(questionModel.Answer, "notenable");
 
         }
 
@@ -253,12 +310,25 @@ namespace KelimeOyunu
             nextQuestion();
 
             question = questionModel.Question;
-            answer = questionModel.Answer;
+            answer = questionModel.Answer.ToLower();
             question_label.Text = question;
 
-            getVisible(answer);
+            getVisible(soru_no);
             soru_no++;
             
+        }
+
+        public void nextQuestion()
+        {
+
+            clearTextBox();
+            okay_button.Visible = false;
+            answer_button.Visible = true;
+            answer_button.Enabled = true;
+            get_letter_button.Visible = true;
+            get_letter_button.Enabled = true;
+            ten_seconds_label.Visible = false;
+            getEnable(questionModel.Answer, "notenable");
         }
 
         public void finishGame()
@@ -268,9 +338,10 @@ namespace KelimeOyunu
             DateTime tarih = DateTime.Now;
             dbService.insertGamer(userName, toplam_puan,kalan_zaman,tarih);
             MessageBox.Show("Ad: " + userName + "\nPuan: " + toplam_puan +"\nKalan süre: " + minute_label.Text + ":" + second_label.Text + "\nOynama tarihi: " + tarih, "Oyun Bitti",MessageBoxButtons.OK);
-            this.Close();
-            Form1 form1 = new Form1();
-            form1.Show();
+            
+            //this.Container.Dispose();
+            
+            this.Hide();
         }
 
 
@@ -380,66 +451,83 @@ namespace KelimeOyunu
 
         }
 
+        public int getRandom(int c)
+        {
+            r1 = rnd.Next(0, c);
+
+            return r1;
+        }
+
         public void getModel(int soruNo)
         {
             soru_no_label.Text = soruNo.ToString() + "-";
+
             if (soruNo == 2)
             {
-                q4();
-                questionModel = nextQuestionModel;
+                r2 = getRandom(questions4.Count());
+                questionModel =  questions4[r2];
+                
+                questions4.Remove(questionModel);
+
             }
             else if (soruNo == 3 || soruNo == 4)
             {
-                q5();
-                if (soruNo == 4)
-                {
-                    questionModel = nextQuestionModel;
-                }
+
+                r2 = getRandom(questions5.Count());
+                questionModel = questions5[r2];
+
+                questions5.Remove(questionModel);
+                
             }
 
             else if (soruNo == 5 || soruNo == 6)
             {
-                q6();
-                if (soruNo == 6)
-                {
-                    questionModel = nextQuestionModel;
-                }
+
+                r2 = getRandom(questions6.Count());
+                questionModel = questions6[r2];
+
+                questions6.Remove(questionModel);
+
             }
 
             else if (soruNo == 7 || soruNo == 8)
             {
-                q7();
-                if (soruNo == 8)
-                {
-                    questionModel = nextQuestionModel;
-                }
+
+                r2 = getRandom(questions7.Count());
+                questionModel = questions7[r2];
+
+                questions7.Remove(questionModel);
+
             }
 
             else if (soruNo == 9 || soruNo == 10)
             {
-                q8();
-                if (soruNo == 10)
-                {
-                    questionModel = nextQuestionModel;
-                }
+
+                r2 = getRandom(questions8.Count());
+                questionModel = questions8[r2];
+
+                questions8.Remove(questionModel);
+
             }
 
             else if (soruNo == 11 || soruNo == 12)
             {
-                q9();
-                if (soruNo == 12)
-                {
-                    questionModel = nextQuestionModel;
-                }
+
+                r2 = getRandom(questions9.Count());
+                questionModel = questions9[r2];
+
+                questions9.Remove(questionModel);
+
             }
 
             else if (soruNo == 13 || soruNo == 14)
             {
-                q10();
-                if (soruNo == 14)
-                {
-                    questionModel = nextQuestionModel;
-                }
+
+                r2 = getRandom(questions10.Count());
+                questionModel = questions10[r2];
+
+                questions10.Remove(questionModel);
+
             }
             else
             {
@@ -447,148 +535,6 @@ namespace KelimeOyunu
             }
 
         }
-
-        public QuestionModel getQuestion(int cevap_uzunluk, int r)
-        {
-            questions = dbService.getQuestion(cevap_uzunluk);
-
-            QuestionModel model = questions[r];
-
-            return model;
-        }
-
-        public int listCount(int cevap_uzunluk)
-        {
-            questions = dbService.getQuestion(cevap_uzunluk);
-            return questions.Count;
-        }
-
-
-        public void q4()
-        {
-           
-            r1 = rnd.Next(0, listCount(4));
-            r2 = rnd.Next(0, listCount(4));
-
-            if(r1 == r2)
-            {
-                while (r1 == r2)
-                {
-                    r2 = rnd.Next(0, listCount(4));
-                }
-            }
-
-            questionModel = getQuestion(4, r1);
-            nextQuestionModel = getQuestion(4, r2);
-
-        }
-        public void q5()
-        {
-  
-            r1 = rnd.Next(0, listCount(5));
-            r2 = rnd.Next(0, listCount(5));
-
-            if (r1 == r2)
-            {
-                while (r1 == r2)
-                {
-                    r2 = rnd.Next(0, listCount(5));
-                }
-            }
-
-            questionModel = getQuestion(5, r1);
-            nextQuestionModel = getQuestion(5, r2);
-
-        }
-        public void q6()
-        {
-
-            r1 = rnd.Next(0, listCount(6));
-            r2 = rnd.Next(0, listCount(6));
-
-            if (r1 == r2)
-            {
-                while (r1 == r2)
-                {
-                    r2 = rnd.Next(0, listCount(6));
-                }
-            }
-
-            questionModel = getQuestion(6, r1);
-            nextQuestionModel = getQuestion(6, r2);
-        }
-        public void q7()
-        {
-
-            r1 = rnd.Next(0, listCount(7));
-            r2 = rnd.Next(0, listCount(7));
-
-            if (r1 == r2)
-            {
-                while (r1 == r2)
-                {
-                    r2 = rnd.Next(0, listCount(7));
-                }
-            }
-
-            questionModel = getQuestion(7, r1);
-            nextQuestionModel = getQuestion(7, r2);
-        }
-
-        public void q8()
-        {
-
-            r1 = rnd.Next(0, listCount(8));
-            r2 = rnd.Next(0, listCount(8));
-
-            if (r1 == r2)
-            {
-                while (r1 == r2)
-                {
-                    r2 = rnd.Next(0, listCount(8));
-                }
-            }
-
-            questionModel = getQuestion(8, r1);
-            nextQuestionModel = getQuestion(8, r2);
-        }
-
-        public void q9()
-        {
-
-            r1 = rnd.Next(0, listCount(9));
-            r2 = rnd.Next(0, listCount(9));
-
-            if (r1 == r2)
-            {
-                while (r1 == r2)
-                {
-                    r2 = rnd.Next(0, listCount(9));
-                }
-            }
-
-            questionModel = getQuestion(9, r1);
-            nextQuestionModel = getQuestion(9, r2);
-        }
-
-        public void q10()
-        {
-
-            r1 = rnd.Next(0, listCount(10));
-            r2 = rnd.Next(0, listCount(10));
-
-            if (r1 == r2)
-            {
-                while (r1 == r2)
-                {
-                    r2 = rnd.Next(0, listCount(10));
-                }
-            }
-
-            questionModel = getQuestion(10, r1);
-            nextQuestionModel = getQuestion(10, r2);
-        }
-
 
         public void clearTextBox()
         {
@@ -605,62 +551,77 @@ namespace KelimeOyunu
 
         }
 
-        public void getVisible(string a)
+        public void getVisible(int soruNo)
         {
-            switch (a.Length)
+            if(soruNo == 1 || soruNo == 2)
             {
-                case 4:
-                    soru_puan = 400;
-                    question_score.Text = soru_puan.ToString();
-                    break;
-                case 5:
-                    textBox5.Visible = true;
-                    soru_puan = 500;
-                    question_score.Text = soru_puan.ToString();
-                    break;
-                case 6:
-                    textBox5.Visible = true;
-                    textBox6.Visible = true;
-                    soru_puan = 600;
-                    question_score.Text = soru_puan.ToString();
-                    break;
-                case 7:
-                    textBox5.Visible = true;
-                    textBox6.Visible = true;
-                    textBox7.Visible = true;
-                    soru_puan = 700;
-                    question_score.Text = soru_puan.ToString();
-                    break;
-                case 8:
-                    textBox5.Visible = true;
-                    textBox6.Visible = true;
-                    textBox7.Visible = true;
-                    textBox8.Visible = true;
-                    soru_puan = 800;
-                    question_score.Text = soru_puan.ToString();
-                    break;
-                case 9:
-                    textBox5.Visible = true;
-                    textBox6.Visible = true;
-                    textBox7.Visible = true;
-                    textBox8.Visible = true;
-                    textBox9.Visible = true;
-                    soru_puan = 900;
-                    question_score.Text = soru_puan.ToString();
-                    break;
-                case 10:
-                    textBox5.Visible = true;
-                    textBox6.Visible = true;
-                    textBox7.Visible = true;
-                    textBox8.Visible = true;
-                    textBox9.Visible = true;
-                    textBox10.Visible = true;
-                    soru_puan = 1000;
-                    question_score.Text = soru_puan.ToString();
-                    break;
-                default:
-                    break;
+                soru_puan = 400;
+                question_score.Text = soru_puan.ToString();
             }
+
+            else if (soruNo == 3 || soruNo == 4)
+            {
+                textBox5.Visible = true;
+                soru_puan = 500;
+                question_score.Text = soru_puan.ToString();
+            }
+
+            else if (soruNo == 5 || soruNo == 6)
+            {
+                textBox5.Visible = true;
+                textBox6.Visible = true;
+                soru_puan = 600;
+                question_score.Text = soru_puan.ToString();
+            }
+
+            else if (soruNo == 7 || soruNo == 8)
+            {
+                textBox5.Visible = true;
+                textBox6.Visible = true;
+                textBox7.Visible = true;
+                soru_puan = 700;
+                question_score.Text = soru_puan.ToString();
+            }
+
+            else if (soruNo == 9 || soruNo == 10)
+            {
+                textBox5.Visible = true;
+                textBox6.Visible = true;
+                textBox7.Visible = true;
+                textBox8.Visible = true;
+                soru_puan = 800;
+                question_score.Text = soru_puan.ToString();
+            }
+
+            else if (soruNo == 11 || soruNo == 12)
+            {
+                textBox5.Visible = true;
+                textBox6.Visible = true;
+                textBox7.Visible = true;
+                textBox8.Visible = true;
+                textBox9.Visible = true;
+                soru_puan = 900;
+                question_score.Text = soru_puan.ToString();
+            }
+
+            else if (soruNo == 13 || soruNo == 14)
+            {
+                textBox5.Visible = true;
+                textBox6.Visible = true;
+                textBox7.Visible = true;
+                textBox8.Visible = true;
+                textBox9.Visible = true;
+                textBox10.Visible = true;
+                soru_puan = 1000;
+                question_score.Text = soru_puan.ToString();
+            }
+
+            else
+            {
+                soru_puan = 0;
+                question_score.Text = soru_puan.ToString();
+            }
+
         }
 
         public void getEnable(string a, string e)

@@ -35,7 +35,7 @@ namespace KelimeOyunu
             else
             {
                 string soru = soru_text.Text;
-                string cevap = cevap_text.Text;
+                string cevap = cevap_text.Text.Trim().ToLower();
                 int cevap_uzunluk = Convert.ToInt32(cevap_uzunluk_upDown.Value);
 
                 if (cevap.Length != cevap_uzunluk)

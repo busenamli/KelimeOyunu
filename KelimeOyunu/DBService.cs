@@ -108,5 +108,30 @@ namespace KelimeOyunu
                 return false;
             }
         }
+
+        public List<GamerModel> fillList()
+        {
+            List<GamerModel> gamerModels = new List<GamerModel>();
+            string query = "SELECT `oyuncu_ad`,`oyuncu_puan`,`oyuncu_sure` FROM `oyuncular` ORDER BY `oyuncu_puan` DESC";
+            MySqlCommand command = new MySqlCommand(query, dbConnection.getConnection);
+
+            //MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+            dbConnection.openConnection();
+
+            MySqlDataReader oku = command.ExecuteReader();
+
+
+            while (oku.Read())
+            {
+                gamerModels.Add(new GamerModel(oku["oyuncu_ad"].ToString(), Convert.ToInt32(oku["oyuncu_puan"]), Convert.ToInt32(oku["oyuncu_sure"].ToString())));
+            }
+            dbConnection.closeConnection();
+
+            /*DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);*/
+
+            return gamerModels;
+        }
     }
 }

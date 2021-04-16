@@ -13,31 +13,13 @@ namespace KelimeOyunu
     public partial class Form1 : Form
     {
         public static string user_name;
+        DBService dBService = new DBService();
+        List<GamerModel> gamerModel = new List<GamerModel>();
 
         public Form1()
         {
             InitializeComponent();
             this.IsMdiContainer = true;
-            SetBackGroundColorOfMDIForm();
-
-        }
-
-        private void SetBackGroundColorOfMDIForm()
-        {
-            foreach (Control ctl in this.Controls)
-            {
-                if ((ctl) is MdiClient)
-
-                // If the control is the correct type,
-                // change the color.
-                {
-                    ctl.BackColor = System.Drawing.Color.CadetBlue;
-                }
-            }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -50,44 +32,52 @@ namespace KelimeOyunu
                 getForm(startGame);
                 back_picture.Visible = true;
                 panel1.Visible = false;
-                //startGame.Show(this);
-                //this.Hide();
+
             }
             else
             {
                 MessageBox.Show("Lütfen adınızı giriniz", "Geçersiz Giriş", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-        }
+            name_text.Text = "";
 
-        /*private void exit_button_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Application.Exit();
-        }*/
+        }
 
         private void add_word_button_Click(object sender, EventArgs e)
         {
             AddWord addWord = new AddWord();
             getForm(addWord);
-            /*addWord.MdiParent = this;
-            addWord.Show();*/
             back_picture.Visible = true;
             panel1.Visible = false;
         }
 
         private void getForm(Form form)
         {
-            //panel2.Controls.Clear();
             form.MdiParent = this;
             form.FormBorderStyle = FormBorderStyle.None;
-            //panel2.Controls.Add(form);
             form.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            gamerModel = dBService.fillList();
 
+            listView1.Columns.Add("Ad",90);
+            listView1.Columns.Add("Puan",90);
+            listView1.Columns.Add("Kalan süre",90);
+
+            listView1.View = View.Details;
+            listView1.GridLines = false;
+
+            ListViewItem item = new ListViewItem();
+
+            for (int i = 0; i < 5; i++)
+            {
+                string sure = (gamerModel[i].Time/60).ToString() + ":" + (gamerModel[i].Time%60).ToString();
+                item = listView1.Items.Add(gamerModel[i].Name);
+                item.SubItems.Add(gamerModel[i].Score.ToString());
+                item.SubItems.Add(sure);
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

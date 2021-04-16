@@ -112,6 +112,7 @@
     <Compile Include="Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
+    <Compile Include="GamerModel.cs" />
     <Compile Include="LetterModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,10 +157,19 @@
     <None Include="Resources\close-button-png.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\button-icon-png.png" />
+    <None Include="Resources\left-arrow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\left-arrow.png" />
+    <None Include="Resources\Books words black Download PowerPoint Backgrounds   PPT Backgrounds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PNGIX.com_back-button-png_1871597.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1569982175971-d92b01cf8694.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-256.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
